@@ -13,7 +13,12 @@ const IdentificationMdl = require("../Models/IdentificationMdl");
 const SplashWelcomeCtrl = require("./../Controllers/SplashWelcomeCtrl");
 const IdentificationCtrl = require("./../Controllers/IdentificationCtrl");
 const WelcomeUserCtrl = require("./../Controllers/WelcomeUserCtrl");
+
+/** Pages principales */
 const ConversationCtrl = require("./../Controllers/ConversationCtrl");
+const MyAccountCtrl = require("./../Controllers/MyAccountCtrl");
+const ListingCoupleCtrl = require("./../Controllers/ListingCoupleCtrl");
+const EventCtrl = require("./../Controllers/EventCtrl");
 
 
 /** Lorsque qu'on utilise le chemin "host + / ", une instance du controller "HomePage" est créé */
@@ -29,9 +34,23 @@ router.get('/WelcomeUser/:userId', function(req, res) {
     new WelcomeUserCtrl(req, res, connection, req.params.userId);
 });
 
+
+/** Call pages principales */
+
 router.get('/Conversation', function(req, res) {
     new ConversationCtrl(req, res, connection, req.params.userId);
 });
+router.get('/MyAccount', function(req, res) {
+    new MyAccountCtrl(req, res, connection, req.params.userId);
+});
+router.get('/LesCouplesAutourDuMien', function(req, res) {
+    new ListingCoupleCtrl(req, res, connection, req.params.userId);
+});
+router.get('/Evenement', function(req, res) {
+    new EventCtrl(req, res, connection, req.params.userId);
+});
+
+
 
 
 router.post('/VerifyId/:mail/:mdp', (req, res) => {

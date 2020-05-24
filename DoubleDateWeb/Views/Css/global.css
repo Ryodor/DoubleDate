@@ -1,0 +1,49 @@
+.stroke {
+    border-style: solid;
+}
+
+
+/* Tout les blocks */
+
+#window {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#windowOnglet {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*.page {
+    margin: auto;
+    align-items: center;
+}*/
+
+.block {
+    /* width: 300px; */
+    display: inline-block;
+    height: 89%;
+    border-radius: 20px;
+}
+
+.onglet {
+    /* width: 300px; */
+    display: inline-block;
+    height: 5%;
+    border-radius: 5px;
+}
+
+#FooterMenu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 10%;
+}
