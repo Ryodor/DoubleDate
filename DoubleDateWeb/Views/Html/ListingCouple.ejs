@@ -11,10 +11,23 @@
     <div id="page">
         <div id="details" class="stroke block">
             <p>Détails du couple</p>
+
+            <p>
+                <%= allCouple[0].presentation %>
+            </p>
+
         </div>
 
         <div id="listeCouple" class="stroke block">
             <p>Liste des couples</p>
+
+            <% for(let i = 0; i < allCouple.length; i++){ %>
+                <p class="coupleName">
+                    -
+                    <%= allCouple[i].presentation %> -
+                </p>
+                <% } %>
+
         </div>
 
     </div>

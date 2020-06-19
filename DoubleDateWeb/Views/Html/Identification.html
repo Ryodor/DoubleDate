@@ -3,42 +3,51 @@
 <head>
     <meta charset="utf-8" />
     <title>Double Date</title>
-    <link rel="stylesheet" type="text/css" href="/Css/home.css">
+    <link rel="stylesheet" type="text/css" href="/Css/identification.css">
+    <link rel="stylesheet" type="text/css" href="/Css/listCouple.css">
+    <link rel="stylesheet" type="text/css" href="/Css/global.css">
 </head>
 
 <div class="containerWelcome">
-    <p>Identification</p>
 
+    <div id="window">
+        <div id="page">
+            <div id="connexion" class="stroke block">
+                <p>Connexion</p>
+                <div>
+                    <p>Email</p>
+                    <input type="text" id="mail" name="mail" size="10">
+                </div>
+                <div>
+                    <p>Mot de Passe</p>
+                    <input type="text" id="mdp" name="mdp" size="10">
+                </div>
+                <div>
+                    <input class="favorite styled" id="connectBt" type="button" value="Connexion" onclick="VerifiyId()">
+                </div>
+            </div>
 
-    <div>
-        <p>Email</p>
-        <input type="text" id="mail" name="mail" size="10">
-    </div>
-    <div>
-        <p>Mot de Passe</p>
-        <input type="text" id="mdp" name="mdp" size="10">
-    </div>
-    <div>
-        <input class="favorite styled" id="connectBt" type="button" value="Connexion" onclick="VerifiyId()">
+            <div id="inscription" class="stroke block">
+                <p>Nouveau compte</p>
+                <div>
+                    <p>Email</p>
+                    <input type="text" id="mail" name="mail" size="10">
+                </div>
+                <div>
+                    <p>Mot de Passe</p>
+                    <input type="text" id="mdp" name="mdp" size="10">
+                </div>
+                <div>
+                    <p>Confirmation Mot de Passe</p>
+                    <input type="text" id="mdp" name="mdp" size="10">
+                </div>
+            </div>
+        </div>
     </div>
 
-    <br />
-    <br />
-    <br />
-
-
-    <p>Nouveau compte</p>
-    <div>
-        <p>Email</p>
-        <input type="text" id="mail" name="mail" size="10">
-    </div>
-    <div>
-        <p>Mot de Passe</p>
-        <input type="text" id="mdp" name="mdp" size="10">
-    </div>
-    <div>
-        <p>Confirmation Mot de Passe</p>
-        <input type="text" id="mdp" name="mdp" size="10">
+    <!-- FOOTER -->
+    <div id="FooterMenu" class="stroke">
+        <p>Footer</p>
     </div>
 
 

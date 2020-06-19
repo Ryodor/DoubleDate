@@ -1,0 +1,11 @@
+
+Le projet doit-être présenté sous l’angle fonctionnel, technique et commercial.
+
+10p - Présentation, Structure, clarté de la proposition
+  5p - Respect du besoin client
+15p - Argumentation Commerciale  
+Description courte de l’application étudiée
+Fonctionnalités Majeures et Mineures
+Les cibles sur le marché
+Modèle économique
+Force de l’application mobile sur son marché

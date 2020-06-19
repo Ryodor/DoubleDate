@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mon Compte</title>
+    <link rel="stylesheet" type="text/css" href="/Css/myAccount.css">
+    <link rel="stylesheet" type="text/css" href="/Css/global.css">
+</head>
+
+<div id="window">
+    <div id="page">
+        <div id="monCompte" class="stroke block">
+            <div id="page">
+            </div>
+            <p>Mon compte</p>
+
+            <p>
+                <%= userInfo[0].email %>
+            </p>
+
+        </div>
+
+        <div id="preference" class="stroke block">
+            <div id="page">
+            </div>
+            <p>Mon/Ma Compagnon/Compagne</p>
+            <div id="partenaire">
+
+            </div>
+
+        </div>
+
+        <div id="preference" class="stroke block">
+            <div id="page">
+            </div>
+            <p>Mon Couple</p>
+            <p>
+                <%= couple[0].presentation %>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<div id="FooterMenu" class="stroke">
+    <p>Footer</p>
+</div>
+
+<script type="text/javascript" src="../Js/server.js"></script>
+<script type="text/javascript" src="../Js/myAccount.js"></script>
+</body>
+
+</html>

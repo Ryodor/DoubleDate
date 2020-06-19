@@ -10,16 +10,39 @@
 <div id="window">
     <div id="page">
 
+        <p class="userInfo">
+            <%= userInfo[0].email %>
+        </p>
+
         <div id="listeContact" class="stroke block">
             <p>Liste des contacts</p>
+
+            <% for(let i = 0; i < conv.length; i++){ %>
+                <p class="coupleName">
+                    <%= conv[i].conversations_id %>
+                </p>
+                <% } %>
+
         </div>
 
         <div id="conversation" class="stroke block">
             <p>Conversation</p>
+
+            <% for(let i = 0; i < mess.length; i++){ %>
+                <p class="coupleName">
+                    <%= mess[i].pseudo %> -
+                        <%= mess[i].text_message %>
+                </p>
+                <% } %>
         </div>
 
         <div id="wallCouple" class="stroke block">
             <p>Mur du couple</p>
+
+            <p>
+                <%= couple[0].presentation %>
+            </p>
+
         </div>
 
     </div>

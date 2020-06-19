@@ -1,0 +1,37 @@
+Rapport composé de 5 parties :
+- Choix et argumentation des indicateurs 
+- Analyse des résultats obtenus (Audit de performances) 
+- Optimisations et préconisations d’optimisations 
+- Énumération de failles de sécurité potentielles, tests et résultats des tests 
+- Préconisations pour corrections de failles potentielles
+-----------------------------------------------------------------------
+en details :
+Choix et argumentation des outils et indicateurs choisis 
+• Pertinence du choix des outils d’analyse 
+• Pertinence des indicateurs choisis, qualité d’explication 
+
+Analyse des résultats obtenus 
+• Comparaison valeur attendue / valeur obtenue, goulots de ralentissement 
+• Explication de l’écart, du manque de performance 
+• Justesse de l’explication 
+
+Optimisation et préconisations d’optimisations 
+• Propositions de corrections / Pertinence des solutions proposées selon objectifs 
+• Prise en compte des limites matérielles, logicielles et financières (temporelles) 
+
+Énumération de failles de sécurité potentielles, tests et résultats des tests 
+• Pertinence du choix des outils d’analyse de sécurité 
+• Pertinence des points à tester 
+• Présentation et analyse des résultats 
+
+Préconisations pour corrections de failles potentielles 
+• Priorisation du traitement des failles 
+• Propositions de corrections / Pertinence des corrections proposées 
+• Prise en compte des limites matérielles, logicielles et financières (temporelles)
+ Pour doc eval de performance
+Les attentes du correcteur :
+- L’analyse est pertinente au regard des indicateurs mis en place et des données sélectionnées.
+- Le diagnostic est réalisé sur le développement généré : l’identification des failles potentielles du code est effectuée
+- Le rapport d’analyse comporte des pistes d’amélioration/optimisation et propose des actions correctives adaptées à la situation
+- Les outils et méthodes retenus sont adaptés aux objectifs d’analyse de performance et de sécurité.
+- Les actions correctives menées ont résolu la totalité des problèmes identifiés.

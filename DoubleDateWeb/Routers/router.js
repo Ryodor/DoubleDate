@@ -6,8 +6,8 @@ const connection = new DBConnection();
 
 /* initialization of the models */
 const IdentificationMdl = require("../Models/IdentificationMdl");
-
-
+const CouplesMdl = require("../Models/CoupleMdl");
+const UserMdl = require("../Models/UserMdl");
 
 /** Les pages sont appelés par un controlleurs qui aura pour but de gérer les différents paramètres de la page avant de l'afficher */
 const SplashWelcomeCtrl = require("./../Controllers/SplashWelcomeCtrl");
@@ -25,29 +25,52 @@ const EventCtrl = require("./../Controllers/EventCtrl");
 router.get('/', function(req, res) {
     new SplashWelcomeCtrl(req, res, connection);
 });
-
 router.get('/Identification', function(req, res) {
     new IdentificationCtrl(req, res, connection);
 });
-
 router.get('/WelcomeUser/:userId', function(req, res) {
     new WelcomeUserCtrl(req, res, connection, req.params.userId);
 });
 
 
 /** Call pages principales */
-
-router.get('/Conversation', function(req, res) {
+router.get('/Conversation/:userId', function(req, res) {
     new ConversationCtrl(req, res, connection, req.params.userId);
 });
-router.get('/MyAccount', function(req, res) {
+router.get('/MyAccount/:userId', function(req, res) {
     new MyAccountCtrl(req, res, connection, req.params.userId);
 });
-router.get('/LesCouplesAutourDuMien', function(req, res) {
+router.get('/LesCouplesAutourDuMien/:userId', function(req, res) {
     new ListingCoupleCtrl(req, res, connection, req.params.userId);
 });
 router.get('/Evenement', function(req, res) {
     new EventCtrl(req, res, connection, req.params.userId);
+});
+
+
+
+/** Récupère son couple a l'aide de son ID */
+router.get('/getMyCouple/:id', (req, res) => {
+    let CplMdl = new CouplesMdl(connection);
+    CplMdl.getCoupleWithUser(req.params.id)
+        .then(result => {
+            res.send(JSON.stringify(result));
+            console.log(result);
+        }).catch((error) => {
+            res.send({ code: 'error', error })
+        });
+});
+
+/** Récupère les infos d'un utilisateur à l'aide de son ID */
+router.get('/getUserInfoById/:id', (req, res) => {
+    let UsrMdl = new UserMdl(connection);
+    UsrMdl.getInfoUser(req.params.id)
+        .then(result => {
+            res.send(JSON.stringify(result));
+            console.log(result);
+        }).catch((error) => {
+            res.send({ code: 'error', error })
+        });
 });
 
 
@@ -71,8 +94,6 @@ router.post('/VerifyId/:mail/:mdp', (req, res) => {
             res.status(500).send('Something broke!');
             // res.send({ code: 'error', error })
         });
-
-
 });
 
 
